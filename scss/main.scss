@@ -8,6 +8,67 @@
 body {
     background-color: $light-color;
     color: $dark-color;
-    font: $font-stack;
+    font-family:  $font-stack;
     line-height: 1.5;
 }
+
+
+header {
+    background: $dark-color;
+    color: $light-color;
+    padding: 1rem;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.section {
+
+    padding: 3rem;
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    &-a {
+        background: $primary-color;
+        color: #FFF;
+    }
+
+    &-b {
+        background: $secondary-color;
+        color: #FFF;
+    }
+}
+
+a {
+    color: #333;
+    &:hover {
+        color: coral;
+    }
+
+}
+
+%btn-shared {
+    display: inline-block;
+    padding:0.7rem 2rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.btn {
+    &-light {
+        @extend %btn-shared;
+        background-color: $light-color;
+        color: #333;
+    }
+    &-dark {
+        @extend %btn-shared;
+        background-color: $dark-color;
+        color: #FFF;
+    }
+}
+
